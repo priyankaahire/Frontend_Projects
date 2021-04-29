@@ -7,7 +7,7 @@ const imgArr = [
     },
     {
         imgtitle: "Christ the Redeemer Statue",
-        url: "Christ_Redeemer_Statue.jpeg"
+        url: "Christ_Redeemer_Statue.jpg"
     },
     {
         imgtitle: "Machu Picchu (Peru)",
