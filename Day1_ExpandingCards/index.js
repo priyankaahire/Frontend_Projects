@@ -35,7 +35,7 @@ const imgArr = [
     }]
 for (let i = 0; i < imgArr.length; i++) {
     var divElem = document.createElement("div");
-    divElem.setAttribute("style", "background-image:url(images/" + imgArr[i].url + ")");
+    divElem.setAttribute("style", "background-image:url(images1/" + imgArr[i].url + ")");
 
     if (i == 0) {
         divElem.setAttribute("class", "panel active");
