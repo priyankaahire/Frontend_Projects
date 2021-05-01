@@ -19,9 +19,10 @@ body {
    position: relative;
    display:flex;
    justify-content: center;
-   align-items: center;
    flex-wrap:wrap;
    padding:50px 10px;
+   justify-content: space-between;
+ 
 }
 .container .card {
     max-width:300px;
@@ -52,6 +53,8 @@ body {
    
     max-width:100%;
     border-radius: 4px;
+    height: 210px;
+    box-shadow: 0 5px 25px rgb(0, 0, 0, 0.2);
 }
 .container .card .content {
     position:relative;
@@ -70,3 +73,6 @@ body {
     transition-delay: 0.3s;
 
 }
+
+
+
