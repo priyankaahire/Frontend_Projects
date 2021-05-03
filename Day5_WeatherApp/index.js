@@ -22,7 +22,7 @@ let weather = {
             const date = document.querySelector(".currentdate");
             date.innerText = this.datefunction(today);
 
-            document.querySelector(".city").innerText = `${name}, ${country}`;
+            document.querySelector(".city").innerText = `Weather in ${name}, ${country}`;
             document.querySelector(".icon").src = `https://openweathermap.org/img/wn/${icon}.png`;
             document.querySelector(".temp").innerText = `${temp} °C`;
             document.querySelector(".description").innerText = description;
