@@ -49,8 +49,10 @@ CLR_BTN.addEventListener('click', () =>{
 
 })
 
-//Bmi calculation
 
+/**
+ * Bmi calculation
+ */
 function performBMICalc() {
     let BMIINFO  = getUserInput(); 
     if(BMIINFO) {
@@ -59,7 +61,10 @@ function performBMICalc() {
    
   
 }
-
+/**
+ * Get Input values from form for both view
+ * @returns 
+ */
 function getUserInput() {
     //get input values from Us unit
     if(activeForm === 'bmi-usc') {
@@ -69,7 +74,6 @@ function getUserInput() {
         heightIinche = document.getElementById('inches').value,
         weightPounds = document.getElementById('weight').value;
 
-        console.log(age, gender, heightFeet, heightIinche, weightPounds);
         status = checkInputStatus([age, gender, heightFeet, heightIinche, weightPounds]);
         
         if(status == "true") {
@@ -80,8 +84,6 @@ function getUserInput() {
                 weight: parseFloat(weightPounds)
 
             })
-        } else {
-            console.log("no");
         }
    
     }
@@ -91,8 +93,6 @@ function getUserInput() {
         gender = document.querySelector('#bmi-si input[name = "gender"]:checked').value,
         heightCM = document.getElementById('cm').value,
         weightKG = document.getElementById('kg').value;
-
-        console.log(age, gender, heightCM, weightKG);
         status = checkInputStatus([age, gender, heightCM, weightKG]);
    
         if(status == "true") {
@@ -103,8 +103,6 @@ function getUserInput() {
                 weight: parseFloat(weightKG)
 
             });
-        } else {
-            console.log("no");
         }
     }
 
@@ -115,7 +113,11 @@ function getUserInput() {
     }, 1000)
 }
 
-
+/**
+ * Validation of Inputs
+ * @param {*} inputs 
+ * @returns 
+ */
 function checkInputStatus(inputs) {
     for(let i = 0; i < inputs.lenght; i++) {
         if(inputs[i].trim() === "" || isNaN(inputs[i])) {
@@ -125,8 +127,12 @@ function checkInputStatus(inputs) {
     return true;
 }
 
-//calculate BMI value
 
+/**
+ * calculate BMI value
+ * @param {*} values 
+ * @returns 
+ */
 function calculateBMI(values) {
     let BMI;
     if(activeForm == 'bmi-usc') {
@@ -134,11 +140,14 @@ function calculateBMI(values) {
     } else {
         BMI = (values.weight / Math.pow(values.height, 2)).toFixed(2);
     }
-    console.log(BMI);
     return {gender: values.gender, BMI}
 }
 
-// print BMI result information
+
+/**
+ * print BMI result information
+ * @param {*} info 
+ */
 function printBMIResult(info) {
 
     document.getElementById('bmi-value').innerHTML = `${info.BMI} kg/m<sup>2</sup>`;
