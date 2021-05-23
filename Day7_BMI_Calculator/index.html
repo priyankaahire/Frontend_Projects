@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="main-wrapper">
+            <div class="bmi-heads">
+                <div id="bmi-usc-head" class="bmi-head active-head">
+                    <h2>US Units</h2>
+                </div>
+                <div id="bmi-si-head" class="bmi-head">
+                    <h2>Metric Units</h2>
+                </div>
+            </div>
+            <!-- bmi US Units-->
+            <div class="bmi-contents">
+                <div class="bmi-content" id="bmi-usc">
+                    <form>
+                        <div class="form-group">
+                            <p>Age</p>
+                            <input type="text" class="form-control" placeholder="2-120" id="age1">
+                        </div>
+                        <div class="form-group col-3">
+                            <p>Gender</p>
+                            <div>
+                                <input type="radio" name="gender" id="male" value="male" checked>
+                                <lable for="male">Male</lable>
+                            </div>
+                            <div>
+                                <input type="radio" name="gender" id="male" value="female">
+                                <lable for="Female">Female</lable>
+                            </div>
+                        </div>
+                        <div class="from-group col-3">
+                            <p>Height</p>
+                            <input type="text" class="form-control" id="feet" placeholder="feet">
+                            <input type="text" class="form-control" id="inches" placeholder="inches">
+                        </div>
+                        <div class="form-group">
+                            <p>Weight</p>
+                            <input type="text" class="form-control" id="weight" placeholder="pounds">
+
+                        </div>
+                        <div class="" style="display:flex;align-items: end;justify-content: flex-end;"><span style="float: right;
+                            font-size: 0.8rem;
+                            font-style: italic;">Note: 1kg = 2.20 lb</span>
+                        </div>
+                    </form>
+                </div>
+                <!-- bmi metric units-->
+                <div id="bmi-si" class="bmi-content">
+                    <form>
+                        <div class="form-group">
+                            <p>Age</p>
+                            <input type="text" class="form-control" placeholder="2-120" id="age2">
+                        </div>
+                        <div class="form-group col-3">
+                            <p>Gender</p>
+                            <div>
+                                <input type="radio" name="gender" id="male" value="male" checked>
+                                <lable for="male">Male</lable>
+                            </div>
+                            <div>
+                                <input type="radio" name="gender" id="male" value="female">
+                                <lable for="Female">Female</lable>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <p>Height</p>
+                            <input type="text" class="form-control" id="cm" placeholder="cm">
+                        </div>
+                        <div class="" style="display:flex;align-items: end;justify-content: flex-end;"><span style="float: right;
+                            font-size: 0.8rem;
+                            font-style: italic;">Note: 1 feet = 30.48 cm</span></div>
+                        <div class="form-group">
+                            <p>Weight</p>
+                            <input type="text" class="form-control" id="kg" placeholder="kg">
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            <div class="btns">
+                <button type="button" id="calc-btn" class="btn">
+                    Calculator</button>
+                </button>
+                <button type="button" id="clr-btn" class="btn">
+                    Clear
+                </button>
+            </div>
+            <div class="output">
+                <span class="alert-error">Some input are invalid</span>
+                <div class="bmi-content">
+                    <h3 id="bmi-value"></h3>
+                    <p id="bmi-category"></p>
+                    <p id="bmi-gender"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="index.js">
+</script>
+
+</html>
