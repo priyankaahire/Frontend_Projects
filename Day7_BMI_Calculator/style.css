@@ -2,8 +2,9 @@
 :root {
     /* --tyrian-purple: #501537; */
     --tyrian-purple: #fff;
-    --magenta: #3f704db0;
-    /* --magenta: #922d50; */
+    --theam: #3f704db0;
+    --error-msg: #ff002387
+    /* --theam: #922d50; */
 }
 *{
     box-sizing: border-box;
@@ -31,7 +32,7 @@ body {
     height: 620px;
 }
 .bmi-heads {
-    background: var(--magenta);
+    background: var(--theam);
     color:#fff;
     display: flex;
     align-items: center;
@@ -91,7 +92,7 @@ cursor: pointer;
     padding: 0.8rem 0 ;
     font-size: 1.15rem;
     border:none;
-    background: var(--magenta);
+    background: var(--theam);
     color:#fff;
     cursor: pointer;
     font-family: inherit;
@@ -116,7 +117,7 @@ cursor: pointer;
 .alert-error {
     text-align: center;
     padding: 1rem 1.6rem 0;
-    color: var(--magenta);
+    color: var(--error-msg);
     display:none;
 }
 .bmi-output {
@@ -127,7 +128,7 @@ cursor: pointer;
     padding-bottom: 0.4rem;
 }
 #bmi-category {
-    color: var(--magenta);
+    color: var(--theam);
 }
 #bmi-gender {
     text-transform: capitalize;

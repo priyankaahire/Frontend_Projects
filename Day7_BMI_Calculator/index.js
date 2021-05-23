@@ -43,9 +43,9 @@ CALC_BIN.addEventListener('click', performBMICalc);
 CLR_BTN.addEventListener('click', () =>{
     let forms = [...document.forms];
     forms.forEach(form => form.reset());
-    document.getElementById('bmi-value').innerHtml = "";
+    document.getElementById('bmi-value').innerHTML = "";
     document.getElementById('bmi-category').innerHTML = "";
-    document.getElementById('bmi-gender').innerHtml = "";
+    document.getElementById('bmi-gender').innerHTML = "";
 
 })
 
@@ -108,9 +108,9 @@ function getUserInput() {
 
     document.querySelector('.alert-error').style.display = 'block';
 
-    setTimeout(() => {
-        document.querySelector('.alert-error').style.display = 'none';
-    }, 1000)
+    // setTimeout(() => {
+    //     document.querySelector('.alert-error').style.display = 'none';
+    // }, 1000)
 }
 
 /**
@@ -119,10 +119,8 @@ function getUserInput() {
  * @returns 
  */
 function checkInputStatus(inputs) {
-    for(let i = 0; i < inputs.lenght; i++) {
-        if(inputs[i].trim() === "" || isNaN(inputs[i])) {
-            return false;
-        }
+    for(let i = 0; i < inputs.length; i++) {
+        if(inputs[i].trim() == "" || isNaN(inputs[i])) return false;
     }
     return true;
 }
@@ -163,5 +161,5 @@ function printBMIResult(info) {
         bmiCategory = 'obesity';
     }
     document.getElementById('bmi-category').innerHTML = `${bmiCategory}`;
-    document.getElementById('bmi-gender').innerHTML = info.gender;
+    document.getElementById('bmi-gender').innerHTML = `${info.gender}`;
 }
