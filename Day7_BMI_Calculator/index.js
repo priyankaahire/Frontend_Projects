@@ -74,7 +74,7 @@ function getUserInput() {
         heightIinche = document.getElementById('inches').value,
         weightPounds = document.getElementById('weight').value;
 
-        status = checkInputStatus([age, gender, heightFeet, heightIinche, weightPounds]);
+        status = checkInputStatus([age, heightFeet, heightIinche, weightPounds]);
         
         if(status == "true") {
             return calculateBMI({
@@ -93,7 +93,7 @@ function getUserInput() {
         gender = document.querySelector('#bmi-si input[name = "gender"]:checked').value,
         heightCM = document.getElementById('cm').value,
         weightKG = document.getElementById('kg').value;
-        status = checkInputStatus([age, gender, heightCM, weightKG]);
+        status = checkInputStatus([age, heightCM, weightKG]);
    
         if(status == "true") {
             return calculateBMI({
@@ -108,9 +108,9 @@ function getUserInput() {
 
     document.querySelector('.alert-error').style.display = 'block';
 
-    // setTimeout(() => {
-    //     document.querySelector('.alert-error').style.display = 'none';
-    // }, 1000)
+    setTimeout(() => {
+        document.querySelector('.alert-error').style.display = 'none';
+    }, 1000)
 }
 
 /**
