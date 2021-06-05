@@ -20,13 +20,19 @@ function addNewNote(text = '') {
     
 note.innerHTML = ` <div class="notes">
 <div class="tools">
-    <button>
-        <i class="fas fa-edit edit" aria-hidden="true"></i>
-    </button>
-    <button>
-        <i class="fas fa-trash-alt delete" aria-hidden="true"></i>
-    </button>
-    <button class="toolAddBtn"><i class="fas fa-plus addBtn"></i></button>
+<div class="pull-right">
+<button class="toolAddBtn"><i class="fas fa-plus addBtn"></i></button>
+</div>
+<div class="pull-left">
+<button>
+<i class="fas fa-edit edit" aria-hidden="true"></i>
+</button>
+<button>
+<i class="fa fa-times delete" aria-hidden="true"></i>
+</button>
+</div>
+   
+   
 </div>
 <div class="content ${text ? '': 'hidden'}"></div>
 <textarea class="${text ? 'hidden': ''}"></textarea>
@@ -64,6 +70,8 @@ textArea.addEventListener("input", (e) => {
 
    document.body.appendChild(note);
 }
+
+
 /**
  * updateLocalStorage()
  * update text into the local storag

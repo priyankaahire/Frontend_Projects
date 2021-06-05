@@ -30,7 +30,7 @@ body {
     cursor: pointer;
 }
 .note {
-    width: 500px;
+    width: 300px;
     height:  auto;
     background:#fff;
     margin:20px;
@@ -38,8 +38,7 @@ body {
 .note .tools {
     background: var(--backgroundColor);
     display:flex;
-    justify-content: flex-end;
-    padding: 0.5rem;
+    padding: 0.5rem 0;
 }
 .note .tools button {
     background: transparent;
@@ -66,4 +65,12 @@ body {
 .note .hidden {
     display: none;
 }
-
+.hold {
+    border: solid #ccc 4px;
+}
+.invisible {
+    display: none;
+}
+.pull-right {
+    flex:1;
+}
