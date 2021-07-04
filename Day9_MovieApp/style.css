@@ -90,9 +90,9 @@ main {
     max-height: 100%;
     overflow: auto;
 }
-/* .movie:hover .overview {
+.movie:hover .overview {
     transform:translateY(0);
-} */
+}
 .stars-outer {
     display: inline-block;
     position: relative;
