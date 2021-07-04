@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic');
+:root {
+    --bg-color: #22254b;
+}
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif; 
+    margin:0;
+    background-color: var(--bg-color);
+
+}
+header {
+    background-color: #373b69;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.5rem;
+
+}
+.search {
+    background-color: transparent;
+    border: 2px solid #22254b;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-family: inherit;
+    color:#fff;
+}
+.search::placeholder {
+    color: #7378c5
+}
+.search:focus {
+    outline: none;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+.movie {
+    width:300px;
+    border-radius:3px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    background-color: #373b69;
+    margin:1rem;
+    overflow: hidden;
+    position: relative;
+  
+}
+.movie img {
+    height:400px;
+    max-width:100%;
+    object-fit: cover;
+}
+.movie-info {  
+    color:#eee;
+    display:flex;
+    justify-content: space-between;
+    padding:0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+    align-items: center;
+}
+.movie-info h3 {
+    margin:0;
+}
+.movie-info span {
+  background: var(--bg-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
+}
+.movie-info span.green {
+    color: green;
+}
+.movie-info span.red {
+    color: red;
+}
+.movie-info span.orange {
+    color: orange;
+}
+.overview {
+    position: absolute;
+    left:0;
+    bottom:0; 
+    right:0;
+    background: #fff;
+    padding: 2rem;
+    transform:translateY(101%);
+    transition: transform 0.3s ease-in;
+    max-height: 100%;
+    overflow: auto;
+}
+/* .movie:hover .overview {
+    transform:translateY(0);
+} */
+.stars-outer {
+    display: inline-block;
+    position: relative;
+    font-family: FontAwesome;
+  }
+  
+  .stars-outer::before {
+    content: "\f006 \f006 \f006 \f006 \f006";
+  }
+  
+  .stars-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+  }
+  
+  .stars-inner::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    color: #f8ce0b;
+  }
