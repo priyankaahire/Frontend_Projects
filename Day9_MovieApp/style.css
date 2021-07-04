@@ -38,7 +38,7 @@ main {
     flex-wrap: wrap;
 }
 .movie {
-    width:300px;
+    width:285px;
     border-radius:3px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
     background-color: #373b69;
@@ -115,4 +115,11 @@ main {
   .stars-inner::before {
     content: "\f005 \f005 \f005 \f005 \f005";
     color: #f8ce0b;
+  }
+  .otherdetails {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0 1rem;
+    letter-spacing: 0.5px;
+    align-items: center;
   }
