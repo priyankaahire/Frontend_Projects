@@ -76,17 +76,6 @@ generatePassword = function () {
     var x = document.getElementById("toast_msg");
     x.className = "show";
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-    // nativeToast({
-    //     message: 'Sucess!',
-    //     position: 'center',    
-    //     rounded: true,
-    //     timeout: 10000,
-    //     type: 'sucess',
-    //     icon: false,
-    //     edge:true,
-    //     closeOnClick: false,
-    //     elements: [createElement()]
-    //   })
 }
 
 generateEle.addEventListener('click', generatePassword);
@@ -106,24 +95,3 @@ copyEle.addEventListener('click', () =>{
     alert("Password copied to clipboard !!!");
     createElement();
 });
-
-// copyEle.addEventListener('click', () =>{
-//     nativeToast({
-//         message: 'Sucess!',
-//         position: 'center',    
-//         rounded: true,
-//         timeout: 10000,
-//         type: 'sucess',
-//         icon: false,
-//         edge:true,
-//         closeOnClick: false,
-//         elements: [createElement()]
-//       })
-// })
-function createElement(){
-    let el = document.createElement('div');
-    let child = document.createElement('span');
-    child.innerText = "Password genereate sucessfully !!";
-    el.appendChild(child);
-    return el;
-}
