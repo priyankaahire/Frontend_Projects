@@ -1,0 +1,147 @@
+/* @import url('https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic');
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    
+}
+body {
+   overflow: hidden;
+
+}
+img {
+    width:50%;
+    position: absolute;
+    
+}
+
+.image_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.car { 
+    mix-blend-mode: hue;
+}
+.color {
+    margin: 0 5px;
+}
+.color_wrap {
+    margin-bottom: 150px;
+    width:100%;
+    height: 100px;
+    display: flex;
+}
+.color_palatte {
+display: flex;
+}
+.palatte {
+    width:40px;
+    height: 20px;
+    background-color: red;
+    border-radius: 2px;
+    margin: 0 10px;;
+}
+.red {
+    background-color:rgb(255, 109, 109);
+}
+.blue {
+    background-color:rgb(123, 123, 255);
+
+}
+.green {
+    background-color:rgb(107, 255, 107);
+}
+.gray {
+    background-color: gray;
+} */
+:root {
+    box-sizing: border-box;
+}
+*, *::after, *::before{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+.product img {
+    max-width:100%;
+    min-width:20rem;
+
+}
+.container {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: hsl(30, 50%, 75%);
+    padding: 0 2.5rem;
+}
+.product::after {
+    content: "";
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    position: absolute;
+    background-color: hsl(30, 50%, 75%);
+    mix-blend-mode: hue;
+}
+.product-nav{
+    position: relative;
+}
+.product-nav label {
+    display: inline-block;
+    height: 5vmin;
+    width: 5vmin;
+    background-color: hsl(30, 50%, 75%);
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0.5em#fff, 
+                0.5em 0.5em 1em -0.15em rgb(0, 0, 0, 0.25);
+                transition: 200ms all ease-in-out;
+}
+.product-nav label + label {
+    margin-left: 2.5em;
+}
+/**
+Targetting the product after selection of color
+**/
+.product-nav label:nth-of-type(1),
+#color-1:checked ~ .product::after {
+    background-color: hsl(30, 50%, 75%);
+}
+.product-nav label:nth-of-type(2),
+#color-2:checked ~ .product::after{
+    background-color: hsl(120, 8%, 46%);
+}
+.product-nav label:nth-of-type(3),
+#color-3:checked ~ .product::after {
+    background-color: hsl(210, 50%, 75%);
+}
+.product-nav label:nth-of-type(4),
+#color-4:checked ~ .product::after {
+    background-color: hsl(300, 50%, 75%);
+}
+/**
+Giving a visual feedback after clicking on radio button 
+**/
+#color-1:checked ~ .product-nav > label:nth-of-type(1),
+#color-2:checked ~ .product-nav > label:nth-of-type(2),
+#color-3:checked ~ .product-nav > label:nth-of-type(3), 
+#color-4:checked ~ .product-nav > label:nth-of-type(4) {
+transform: scale(1.3);
+}
+#color-1:checked ~ .product-nav > label:nth-of-type(1) {
+    background-color: hsl(30, 50%, 45%);
+}
+#color-2:checked ~ .product-nav > label:nth-of-type(2) {
+    background-color: hsl(120, 8%, 45%);
+}
+#color-3:checked ~ .product-nav > label:nth-of-type(3) {
+    background-color: hsl(210, 50%, 45%);
+}
+#color-4:checked ~ .product-nav > label:nth-of-type(4) {
+    background-color: hsl(300, 50%, 45%);
+}

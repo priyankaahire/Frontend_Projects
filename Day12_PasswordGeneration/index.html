@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/native-toast@2.0.0/dist/native-toast.css">
+</head>
+
+<body>
+    <section class="container">
+        <div class="main">
+            <div class="card">
+                <div class="pw-header">
+                    <div class="pw">
+                        <span id="pw">PDFG$193</span>
+                        <button title="copy" id="copy"><i class="fa fa-copy"></i></button>
+                    </div>
+                </div>
+                <div class="pw-content">
+                    <div class="form-control">
+                        <label for="len">Password Length</label>
+                        <input id="len" value="8" type="number" min="2" max="30" />
+                    </div>
+                    <div class="form-control">
+                        <label for="upper">Contain Uppercase Letters</label>
+                        <input id="upper" type="checkbox" />
+                    </div>
+                    <div class="form-control">
+                        <label for="lower">Contain Lowercase Letters</label>
+                        <input id="lower" type="checkbox" />
+                    </div>
+                    <div class="form-control">
+                        <label for="number">Contain Numbers</label>
+                        <input id="number" type="checkbox" />
+                    </div>
+                    <div class="form-control">
+                        <label for="symbol">Contain Symbols</label>
+                        <input id="symbol" type="checkbox" />
+                    </div>
+                    <div class="btn-container">
+                        <button class="generate" id="generate">
+                            Generate Password
+                        </button>
+                    </div>
+                   
+                </div>
+            </div>
+            <div id="toast_msg">Password generate successfully...</div>
+        </div>
+        
+    </section>
+</body>
+<script src="https://unpkg.com/native-toast@2.0.0/dist/native-toast.min.js"></script>
+<script src="script.js">
+</script>
+
+</html>
