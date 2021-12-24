@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic');
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: "Poppins, sans-serif";
+    margin:0;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    background: #5256ad;
+}
+.container {
+    padding: 0 2.5rem;
+}
+.main {
+    display: flex;
+    justify-content: center;
+}
+.drag-container {
+    border: 2px dotted #fff;
+    width: 700px;
+    height:500px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.drag-container .icon {
+    color:#fff;
+    font-size: 100px;
+  }
+.drag-container header {
+  color:#fff;
+  font-size: 30px;
+  font-weight: 500;
+}
+.drag-container span {
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+    margin: 10px 0 10px 0; 
+}
+.drag-container button {
+    padding: 10px 25px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #5256ad;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/*
+  .drag-area.active{
+    border: 2px solid #fff;
+  }
+ 
+ */

@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic');
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: "Poppins, sans-serif";
+}
+.header {
+    background: black;
+    color: white;
+    text-align: start;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+.sub-header {
+    background-color: #353239;
+    padding: 1rem;
+    position: fixed;
+    margin-top: 59px;
+    width: 100%;
+    left: 0;
+}
+.container {
+    padding: 6.0rem  2.5rem;
+}
+.main {
+    display: flex;
+    justify-content: center;
+}
+.todo_listcontianer{
+    width:50%;
+}
+.item_item {
+    text-decoration: none;
+    color: #fafafa;
+    cursor: pointer;
+    background: #353239;
+    border: 1px solid #423e47;
+    margin: 1.6rem 0;
+    padding: 1rem 1.6rem;
+    display: block;
+    transition: background .3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 3px;
+}
+.list_item_container {
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 500;
+    align-items: baseline;
+}
+.list_item_container > *:first-child {
+    margin-right: 0.8rem;
+}
+.btn_remove{
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.btn_remove:hover {
+    color: #ffc107;
+}
+.input{
+    font-size: 1.2rem;
+    font-weight: 300;
+    height: 2rem;
+    margin-right: 1.6rem;
+    padding: 0.4rem 0.8rem;
+}
+.button {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 300;
+    padding: 0.5rem;
+    border-radius: 3px;
+   
+}
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
