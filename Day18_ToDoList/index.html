@@ -12,12 +12,22 @@
 
 <body>
 <div class="header">
-    <div class="header_title">
-        <h2>To Do List</h2>
+    <div class="header_container">
+        <div class="header_title">
+            To Do List
+        </div>
+        <div class="header_subtitle">What do you need to do?</div>
     </div>
-    <div class="header_subtitle"></div>
 </div>
-<div class="sub-header"></div>
+<!-- <div class="sub-header"></div> -->
+<div class="sub-header">
+    <div class="sub-header-container">
+        <input id="filter-todo" class="input" type="text" placeholder="Filter todos">
+        <label class="checkbox" >
+            <input onclick="checkedHideCompleted(this)" id="hide-completed" type="checkbox">Hide completed
+        </label>
+    </div>
+</div>
 <section class="container">
     <div class="main">
        <div class="todo_listcontianer">

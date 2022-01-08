@@ -14,6 +14,20 @@ body {
     left: 0;
     top: 0;
 }
+.header_container {
+    margin: 0 auto;
+    padding: 0 1.6rem;
+    height: 70px;
+}
+.header_title{
+    font-size: 1.8rem;
+    margin-bottom: 0.4rem;
+}
+.header_subtitle {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
 .sub-header {
     background-color: #353239;
     padding: 1rem;
@@ -22,8 +36,17 @@ body {
     width: 100%;
     left: 0;
 }
+.sub-header-container{
+    /* align-items: center;
+    display: flex; */
+    max-width: 60rem;
+    margin: 0 auto;
+    /* min-height: 3rem;
+    padding: 0 1.6rem; */
+
+}
 .container {
-    padding: 6.0rem  2.5rem;
+    padding: 9.0rem  2.5rem;
 }
 .main {
     display: flex;
@@ -66,11 +89,13 @@ body {
     color: #ffc107;
 }
 .input{
-    font-size: 1.2rem;
+    font-size: 15px;
     font-weight: 300;
     height: 2rem;
     margin-right: 1.6rem;
     padding: 0.4rem 0.8rem;
+    height: 30px;
+    width: 50%;
 }
 .button {
     color: #fff;
