@@ -47,7 +47,6 @@ function markAsComplete(current, index)
 }
 function removeFromList(current, index) 
 {
-    console.log(todolist);
     todolist.splice(index, 1); 
     saveTodos(todolist);
     displayTodoLList(todolist, filters);
@@ -56,7 +55,8 @@ const generateTodoDOM = function(todos)
 {
     let data =todos;
     var htmlElemet = ` `;
-    for(var i=0; i <data.length; i++) {
+    for(var i=0; i <data.length; i++) 
+    {
 
         let textStyle       = data[i].status ? "text-decoration:line-through": "text-decoration:none";
         let completedStatus = data[i].status ? 'checked': '';
@@ -89,14 +89,17 @@ const saveTodos = (todos) => {
 }
 
 form.addEventListener('submit', (e) => {
+
     e.preventDefault();
     const todoValue = e.target.elements.addTodo.value.trim();
-    if (todoValue.length > 0){
+    if (todoValue.length > 0)
+    {
         todolist.push({name: todoValue, status: false});
         saveTodos(todolist);
         displayTodoLList(todolist, filters);
         e.target.elements.addTodo.value='';
     }
+
 })
 
 

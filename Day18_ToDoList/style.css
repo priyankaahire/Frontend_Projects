@@ -37,13 +37,8 @@ body {
     left: 0;
 }
 .sub-header-container{
-    /* align-items: center;
-    display: flex; */
     max-width: 60rem;
     margin: 0 auto;
-    /* min-height: 3rem;
-    padding: 0 1.6rem; */
-
 }
 .container {
     padding: 9.0rem  2.5rem;
