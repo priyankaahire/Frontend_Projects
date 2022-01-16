@@ -1,8 +1,16 @@
 class Calculator {
+
+    static functionMap = {};
     constructor(prevOperandTextEl, currOperandTextEl) {
           this.prevOperandTextEl = prevOperandTextEl;
           this.currOperandTextEl = currOperandTextEl;
           this.clear();
+          Calculator.functionMap = {
+            '+': this.add,
+            '-': this.sub,
+            '*': this.multiple,
+            '÷': this.divsion
+        };
     }
     //* Clear 
     clear() {
@@ -29,7 +37,9 @@ class Calculator {
        const prev = parseFloat(this.prevOperand);
        const current = parseFloat(this.currentOperand);
        if(isNaN(prev) || isNaN(current)) return;
-       switch(this.operation) {
+       let computationFun = Calculator.functionMap[this.operation];
+       //% Instead of switch case I have used function maps
+       /*switch(this.operation) {
            case '+':  computation = prev + current;
            break;
            case '-':  computation = prev - current;
@@ -40,10 +50,22 @@ class Calculator {
            break;
            default:
            break;
-       }
-       this.currentOperand = computation;
+       }*/
+       this.currentOperand = computationFun != null ? computationFun(prev, current) : '';
        this.operation = undefined;
        this.prevOperand = '';
+    }
+    add(prev, current) {
+        return prev + current;
+    };
+    sub(prev, current) {
+        return prev - current;
+    }
+    multiple(prev, current) {
+        return prev * current;prv-operand
+    }
+    divsion(prev, current) {
+        return prev / current;
     }
     appendNumber(number) {
         console.log(number);
@@ -67,7 +89,7 @@ class Calculator {
         }
 
         if(decDigits != null) {
-            return `${intDisplay} ${decDigits}`;
+            return `${intDisplay}.${decDigits}`;
         } else {
             return intDisplay;
         }
